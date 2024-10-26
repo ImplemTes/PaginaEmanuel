@@ -28,7 +28,8 @@
     }
 
     .logo img {
-        max-height: 4rem; /* Altura máxima del logo */
+        max-height: 4rem;
+        /* Altura máxima del logo */
         object-fit: contain;
     }
 
@@ -43,7 +44,7 @@
     }
 
     .nav-item {
-        padding: 5px 20px;
+        padding: 2px 20px;
         border: 2px solid transparent;
         border-radius: 8px;
         transition: all 0.3s ease;
@@ -95,7 +96,7 @@
 
 <body class="bg-gray-100">
 
- 
+
     <!-- Encabezado -->
     <header class="bg-white shadow-md relative z-20 top-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
@@ -103,7 +104,7 @@
             <div class="flex items-center logo">
                 <img src="/img/logo.png" alt="Grupo Emanuel" class="h-12">
             </div>
-    
+
             <!-- Menú para pantallas grandes -->
             <nav class="hidden md:flex space-x-4 items-center">
                 <a href="#" class="nav-item active">Inicio</a>
@@ -158,7 +159,6 @@
     </header>
 
     <!-- Cuerpo -->
-    <!-- Cuerpo -->
     <main class="relative mt-6">
         <div class="carousel-container bg-cover bg-center">
             <div class="relative mt-4 h-full">
@@ -170,128 +170,145 @@
                         <div class="flex-none w-full h-full">
                             <img src="/img/carrusel/imagen2.jpg" alt="Imagen 2" class="carousel-image">
                         </div>
+                        <div class="flex-none w-full h-full">
+                            <img src="/img/carrusel/imagen3.jpg" alt="Imagen 3" class="carousel-image">
+                        </div>
+                        <div class="flex-none w-full h-full">
+                            <img src="/img/carrusel/imagen4.jpg" alt="Imagen 4" class="carousel-image">
+                        </div>
                     </div>
                 </div>
-                <button id="prev" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded shadow z-10">❮</button>
-                <button id="next" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded shadow z-10">❯</button>
+                <button id="prev"
+                    class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded shadow z-10">❮</button>
+                <button id="next"
+                    class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded shadow z-10">❯</button>
             </div>
         </div>
         <h1>Emanuel Presenta</h1>
     </main>
     <!-- Footer -->
-<!-- Footer -->
-<footer>
-    <!-- Primer Div con fondo gris claro -->
-    <div class="bg-gray-300 w-full py-10">
-        <div class="container mx-auto px-4">
-            <!-- Contenido del primer Div -->
-            <div class="flex flex-wrap md:flex-nowrap justify-between items-start">
-                <!-- Menú de Navegación -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-gray-700 font-semibold mb-2">Menú</h2>
-                    <ul class="text-gray-600 space-y-2">
-                        <li><a href="#" class="hover:text-red-600">Inicio</a></li>
-                        <li><a href="#" class="hover:text-red-600">Conócenos</a></li>
-                        <li><a href="#" class="hover:text-red-600">Campus Emanuel</a></li>
-                        <li><a href="#" class="hover:text-red-600">Portal PQS</a></li>
-                        <li><a href="#" class="hover:text-red-600">Incubadora y Premio PQS</a></li>
-                        <li><a href="#" class="hover:text-red-600">Noticias</a></li>
-                        <li><a href="#" class="hover:text-red-600">Contactos</a></li>
-                    </ul>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <!-- Primer Div con fondo gris claro -->
+        <div class="bg-gray-300 w-full py-10">
+            <div class="container mx-auto px-4">
+                <!-- Contenido del primer Div -->
+                <div class="flex flex-wrap md:flex-nowrap justify-between items-start">
+                    <!-- Menú de Navegación -->
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-gray-700 font-semibold mb-2">Menú</h2>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><a href="#" class="hover:text-red-600">Inicio</a></li>
+                            <li><a href="#" class="hover:text-red-600">Conócenos</a></li>
+                            <li><a href="#" class="hover:text-red-600">Campus Emanuel</a></li>
+                            <li><a href="#" class="hover:text-red-600">Portal PQS</a></li>
+                            <li><a href="#" class="hover:text-red-600">Incubadora y Premio PQS</a></li>
+                            <li><a href="#" class="hover:text-red-600">Noticias</a></li>
+                            <li><a href="#" class="hover:text-red-600">Contactos</a></li>
+                        </ul>
+                    </div>
 
-                <!-- Información sobre Fundación -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-gray-700 font-semibold mb-2">Fundación Emanuel</h2>
-                    <p class="text-gray-600 text-sm">
-                        Brindamos herramientas que ayudan a los peruanos a fortalecer y desarrollar sus capacidades,
-                        incentivando la generación de ideas o proyectos sostenibles y escalables, que aporten al
-                        desarrollo de nuestro país.
-                    </p>
-                </div>
+                    <!-- Información sobre Fundación -->
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-gray-700 font-semibold mb-2">Fundación Emanuel</h2>
+                        <p class="text-gray-600 text-sm">
+                            Brindamos herramientas que ayudan a los peruanos a fortalecer y desarrollar sus capacidades,
+                            incentivando la generación de ideas o proyectos sostenibles y escalables, que aporten al
+                            desarrollo de nuestro país.
+                        </p>
+                    </div>
 
-                <!-- Información de Contacto -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-gray-700 font-semibold mb-2">Contacto</h2>
-                    <p class="text-gray-600 text-sm flex items-center">
-                        <span class="material-icons text-red-600">phone</span>&nbsp; Lima (511) 215 4132
-                    </p>
-                </div>
+                    <!-- Información de Contacto -->
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-gray-700 font-semibold mb-2">Contacto</h2>
+                        <p class="text-gray-600 text-sm flex items-center">
+                            <span class="material-icons text-red-600">phone</span>&nbsp; Lima (511) 215 4132
+                        </p>
+                    </div>
 
-                <!-- Redes Sociales -->
-                <div class="w-full md:w-1/4 mb-6 md:mb-0">
-                    <h2 class="text-gray-700 font-semibold mb-2">Síguenos</h2>
-                    <div class="grid grid-cols-2 gap-4">
-                        <a href="#" class="social-icon text-red-600 text-center">
-                            <i class="fab fa-facebook text-2xl"></i>
-                            <p class="text-gray-600">Facebook</p>
-                        </a>
-                        <a href="#" class="social-icon text-red-600 text-center">
-                            <i class="fab fa-twitter text-2xl"></i>
-                            <p class="text-gray-600">Twitter</p>
-                        </a>
-                        <a href="#" class="social-icon text-red-600 text-center">
-                            <i class="fab fa-tiktok text-2xl"></i>
-                            <p class="text-gray-600">TikTok</p>
-                        </a>
-                        <a href="#" class="social-icon text-red-600 text-center">
-                            <i class="fab fa-instagram text-2xl"></i>
-                            <p class="text-gray-600">Instagram</p>
-                        </a>
+                    <!-- Redes Sociales -->
+                    <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                        <h2 class="text-gray-700 font-semibold mb-2">Síguenos</h2>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="#" class="social-icon text-red-600 text-center">
+                                <i class="fab fa-facebook text-2xl"></i>
+                                <p class="text-gray-600">Facebook</p>
+                            </a>
+                            <a href="#" class="social-icon text-red-600 text-center">
+                                <i class="fab fa-twitter text-2xl"></i>
+                                <p class="text-gray-600">Twitter</p>
+                            </a>
+                            <a href="#" class="social-icon text-red-600 text-center">
+                                <i class="fab fa-tiktok text-2xl"></i>
+                                <p class="text-gray-600">TikTok</p>
+                            </a>
+                            <a href="#" class="social-icon text-red-600 text-center">
+                                <i class="fab fa-instagram text-2xl"></i>
+                                <p class="text-gray-600">Instagram</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Segundo Div con fondo negro -->
-    <div class="bg-white w-full py-4">
-        <div class="container mx-auto px-4">
-            <!-- Logo y Derechos Reservados -->
-            <div class="flex flex-col items-center text-black">
-                <p class="text-sm">2024 <span class="font-semibold">Fundación Emanuel</span>. Todos los derechos reservados</p>
-                <a href="#" class="text-red-600 text-sm  ">Políticas de privacidad y protección de datos</a>
+        <!-- Segundo Div con fondo negro -->
+        <div class="bg-white w-full py-4">
+            <div class="container mx-auto px-4">
+                <!-- Logo y Derechos Reservados -->
+                <div class="flex flex-col items-center text-black">
+                    <p class="text-sm">2024 <span class="font-semibold">Fundación Emanuel</span>. Todos los derechos
+                        reservados</p>
+                    <a href="#" class="text-red-600 text-sm  ">Políticas de privacidad y protección de datos</a>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
+    <!-- JavaScript for Carousel and Menu -->
+    <!-- JavaScript for Carousel and Menu -->
+    <script>
+        const carousel = document.getElementById('carousel');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const totalImages = 4;
+        let currentIndex = 0;
 
+        const updateCarousel = () => {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        };
 
-   <!-- JavaScript for Carousel and Menu -->
-   <script>
-    const carousel = document.getElementById('carousel');
-    const prevButton = document.getElementById('prev');
-    const nextButton = document.getElementById('next');
-    const totalImages = 2;
-    let currentIndex = 0;
+        // Función para avanzar al siguiente slide
+        const nextSlide = () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        };
 
-    const updateCarousel = () => {
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-    };
+        // Avance automático cada 4 segundos
+        setInterval(nextSlide, 4000);
 
-    nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        updateCarousel();
-    });
+        nextButton.addEventListener('click', () => {
+            nextSlide();
+        });
 
-    prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        updateCarousel();
-    });
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
 
-    const menuButton = document.getElementById('menu-button');
-    const closeButton = document.getElementById('close-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+        // Código para el menú móvil
+        const menuButton = document.getElementById('menu-button');
+        const closeButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('translate-x-full');
-    });
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
 
-    closeButton.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
-    });
-</script>
+        closeButton.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+    </script>
 
 </body>
 

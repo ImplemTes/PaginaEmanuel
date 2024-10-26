@@ -44,7 +44,9 @@
     }
 
     .nav-item {
-        padding: 2px 20px;
+        padding: 2px 15px;
+        margin-top: 24px;
+        margin-bottom: 24px;
         border: 2px solid transparent;
         border-radius: 8px;
         transition: all 0.3s ease;
@@ -63,6 +65,7 @@
         position: absolute;
         top: 100%;
         left: 0;
+        border-radius: 8px;
         background-color: white;
         border: 1px solid #ddd;
         border-radius: 4px;
@@ -185,6 +188,20 @@
             </div>
         </div>
         <h1>Emanuel Presenta</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
     <!-- Footer -->
     <!-- Footer -->
@@ -265,7 +282,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Carousel and Menu -->
     <!-- JavaScript for Carousel and Menu -->
     <script>
         const carousel = document.getElementById('carousel');

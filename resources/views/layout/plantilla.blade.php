@@ -7,73 +7,136 @@
     <title>Nuevaera</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
+
 <style>
-    /* Efecto de opacidad en hover */
     .social-icon:hover {
         opacity: 0.7;
+        background-color: #F0F0F0;
     }
 
     .social-icon {
         display: inline-block;
         text-decoration: none;
-        padding: 10px;
-        border-radius: 5px;
+        padding: 5px;
+        border-radius: 15px;
         transition: background-color 0.3s;
     }
 
-    .social-icon:hover {
-        background-color: rgba(59, 4, 255, 0.1);
-        /* Cambio de color al pasar el mouse */
+    .top-border {
+        border-top: 4px solid #FFD700;
+    }
+
+    .logo img {
+        max-height: 4rem; /* Altura máxima del logo */
+        object-fit: contain;
+    }
+
+    .carousel-container {
+        max-height: 450px;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .nav-item {
+        padding: 5px 20px;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        color: #4a5568;
+        text-align: center;
+    }
+
+    .nav-item:hover,
+    .nav-item.active {
+        background-color: #FFD700;
+        color: white;
+    }
+
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+        z-index: 10;
+    }
+
+    .submenu a {
+        display: block;
+        padding: 10px 15px;
+        color: #4a5568;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .submenu a:last-child {
+        border-bottom: none;
+    }
+
+    .submenu a:hover {
+        background-color: #FFD700;
+        color: white;
+    }
+
+    .nav-item:hover .submenu {
+        display: block;
     }
 </style>
 
 <body class="bg-gray-100">
 
+ 
     <!-- Encabezado -->
-    <header class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <img src="/img/logo.png" alt="Grupo Emanuel" class="h-16 ">
-                </div>
-
-                <!-- Menú para pantallas grandes -->
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Inicio</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Nosotros</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Productos</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Servicios</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">¿Por qué elegirnos?</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Clientes</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Blog</a>
-                    <a href="#" class="text-gray-700 hover:text-yellow-500">Contacto</a>
-                </nav>
-
-                <!-- Botón desplegable para pantallas pequeñas -->
-                <div class="md:hidden flex items-center">
-                    <button id="menu-button" class="text-gray-700 focus:outline-none">
-                        <!-- Icono del menú (hamburguesa) -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                    </button>
-                </div>
+    <header class="bg-white shadow-md relative z-20 top-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center logo">
+                <img src="/img/logo.png" alt="Grupo Emanuel" class="h-12">
             </div>
+    
+            <!-- Menú para pantallas grandes -->
+            <nav class="hidden md:flex space-x-4 items-center">
+                <a href="#" class="nav-item active">Inicio</a>
+                <a href="#" class="nav-item">Nosotros</a>
+                <div class="relative nav-item">
+                    <a href="#" class="nav-item">Productos</a>
+                    <div class="submenu">
+                        <a href="#">Madera para Construcción</a>
+                        <a href="#">Triplay para Construcción</a>
+                        <a href="#">Pallets / Parihuelas</a>
+                        <a href="#">Durmientes de Madera</a>
+                        <a href="#">Postes de Madera</a>
+                    </div>
+                </div>
+                <a href="#" class="nav-item">Servicios</a>
+                <a href="#" class="nav-item">¿Por qué elegirnos?</a>
+                <a href="#" class="nav-item">Clientes</a>
+                <a href="#" class="nav-item">Blog</a>
+                <a href="#" class="nav-item">Contacto</a>
+            </nav>
+
+            <!-- Botón de menú móvil -->
+            <button id="menu-button" class="md:hidden">
+                <i class="fas fa-bars text-gray-800 text-xl"></i>
+            </button>
         </div>
 
-        <!-- Menú lateral desplegable para pantallas pequeñas (lado derecho) -->
+        <!-- Menú lateral para pantallas pequeñas -->
         <div id="mobile-menu"
-            class="fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transform translate-x-full transition-transform duration-300 ease-in-out">
+            class="fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transform translate-x-full transition-transform duration-300 ease-in-out z-30">
             <div class="flex justify-between items-center p-4">
                 <span class="text-lg font-semibold">Menú</span>
                 <button id="close-menu-button" class="text-white focus:outline-none">
-                    <!-- Icono de cerrar -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -94,71 +157,31 @@
         </div>
     </header>
 
-    <!-- Sección Principal -->
-    <section class="relative">
-        <div class="h-96 bg-cover bg-center" style="background-image: url('fondo-madera.jpg');">
-            <!-- Carrusel -->
-            <div class="relative mt-4">
-                <div class="overflow-hidden">
-                    <div class="flex transition-transform duration-300" id="carousel">
-                        <div class="flex-none w-full"><img src="/img/carrusel/imagen1.jpg" alt="Imagen 1"
-                                class="w-full h-auto"></div>
-                        <div class="flex-none w-full"><img src="/img/carrusel/imagen2.jpg" alt="Imagen 2"
-                                class="w-full h-auto"></div>
-                        <div class="flex-none w-full"><img src="/img/carrusel/imagen3.jpg" alt="Imagen 3"
-                                class="w-full h-auto"></div>
-                        <div class="flex-none w-full"><img src="/img/carrusel/imagen4.jpg" alt="Imagen 4"
-                                class="w-full h-auto"></div>
-                        <div class="flex-none w-full"><img src="/img/carrusel/imagen5.jpg" alt="Imagen 5"
-                                class="w-full h-auto"></div>
-                        <div class="flex-none w-full"><img src="/img/carrusel/imagen6.jpg" alt="Imagen 6"
-                                class="w-full h-auto"></div>
+    <!-- Cuerpo -->
+    <!-- Cuerpo -->
+    <main class="relative mt-6">
+        <div class="carousel-container bg-cover bg-center">
+            <div class="relative mt-4 h-full">
+                <div class="overflow-hidden relative h-full">
+                    <div class="flex transition-transform duration-300 h-full" id="carousel">
+                        <div class="flex-none w-full relative h-full">
+                            <img src="/img/carrusel/imagen1.jpg" alt="Imagen 1" class="carousel-image">
+                        </div>
+                        <div class="flex-none w-full h-full">
+                            <img src="/img/carrusel/imagen2.jpg" alt="Imagen 2" class="carousel-image">
+                        </div>
                     </div>
                 </div>
-                <button id="prev"
-                    class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded shadow">❮</button>
-                <button id="next"
-                    class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded shadow">❯</button>
+                <button id="prev" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded shadow z-10">❮</button>
+                <button id="next" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded shadow z-10">❯</button>
             </div>
         </div>
-    </section>
-
-    <script>
-        const carousel = document.getElementById('carousel');
-        const prevButton = document.getElementById('prev');
-        const nextButton = document.getElementById('next');
-        const totalImages = 6; // Total de imágenes
-        let currentIndex = 0;
-
-        const updateCarousel = () => {
-            // Cada imagen ocupa el 100% del ancho total
-            const width = 100; // Cambia el ancho a 100%
-            carousel.style.transform = `translateX(-${currentIndex * width}%)`;
-        };
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalImages; // Rollover al inicio
-            updateCarousel();
-        });
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Rollover al final
-            updateCarousel();
-        });
-
-        // Cambiar automáticamente cada 3 segundos
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalImages; // Avanza al siguiente
-            updateCarousel();
-        }, 4000); // Cambia cada 3000 milisegundos (3 segundos)
-    </script>
-
-
-
+        <h1>Emanuel Presenta</h1>
+    </main>
     <!-- Footer -->
     <footer class="bg-gray-200 py-10">
         <div class="container mx-auto px-4">
-
+            <!-- Footer Content Here -->
             <!-- Contenedor Principal -->
             <div class="flex flex-wrap md:flex-nowrap justify-between items-start">
 
@@ -221,54 +244,48 @@
             <!-- Logo y Derechos Reservados -->
             <div class="flex flex-col items-center mt-10">
                 <img src="/img/iso-logo2.png" alt="Logo R" width="56" height="64" class="mb-4">
-                <p class="text-gray-600 text-sm">2017 <span class="font-semibold">Fundación Romero</span>. Todos los
+                <p class="text-gray-600 text-sm">2024 <span class="font-semibold">Fundación Emanuel</span>. Todos los
                     derechos reservados</p>
                 <a href="#" class="text-red-600 text-sm mt-2">Políticas de privacidad y protección de datos</a>
             </div>
-
         </div>
     </footer>
 
 
-    <!-- TailwindCSS y FontAwesome Iconos -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- Script para controlar el menú lateral -->
-    <script>
-        const menuButton = document.getElementById('menu-button');
-        const closeButton = document.getElementById('close-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+   <!-- JavaScript for Carousel and Menu -->
+   <script>
+    const carousel = document.getElementById('carousel');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+    const totalImages = 2;
+    let currentIndex = 0;
 
-        // Función para mostrar el menú lateral
-        function openMenu() {
-            mobileMenu.classList.remove('translate-x-full');
-            document.addEventListener('click', closeOnClickOutside);
-        }
+    const updateCarousel = () => {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    };
 
-        // Función para ocultar el menú lateral
-        function closeMenu() {
-            mobileMenu.classList.add('translate-x-full');
-            document.removeEventListener('click', closeOnClickOutside);
-        }
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateCarousel();
+    });
 
-        // Mostrar el menú al hacer clic en el botón de menú
-        menuButton.addEventListener('click', (event) => {
-            event.stopPropagation(); // Evitar cierre inmediato
-            openMenu();
-        });
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateCarousel();
+    });
 
-        // Ocultar el menú al hacer clic en el botón de cerrar
-        closeButton.addEventListener('click', (event) => {
-            event.stopPropagation(); // Evitar cierre inmediato
-            closeMenu();
-        });
+    const menuButton = document.getElementById('menu-button');
+    const closeButton = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        // Función para cerrar el menú al hacer clic fuera de él
-        function closeOnClickOutside(event) {
-            if (!mobileMenu.contains(event.target) && event.target !== menuButton) {
-                closeMenu();
-            }
-        }
-    </script>
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-x-full');
+    });
+
+    closeButton.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
 
 </body>
 

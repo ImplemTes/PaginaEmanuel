@@ -30,7 +30,9 @@
     .logo img {
         max-height: 4rem;
         /* Altura máxima del logo */
+        /* Ancho máximo del logo */
         object-fit: contain;
+ 
     }
 
     .carousel-container {
@@ -58,6 +60,12 @@
     .nav-item.active {
         background-color: #FFD700;
         color: white;
+        border: 2px solid #FFD700;
+        transition: all 0.3s ease;
+        //MEJORA DE LETRA
+        letter-spacing: 1px;
+        letter-spacing: 0.5px;
+        font-weight: bold;
     }
 
     .submenu {
@@ -98,7 +106,6 @@
 </style>
 
 <body class="bg-gray-100">
-
 
     <!-- Encabezado -->
     <header class="bg-white shadow-md relative z-20 top-border">

@@ -179,12 +179,13 @@
         <h1>Emanuel Presenta</h1>
     </main>
     <!-- Footer -->
-    <footer class="bg-gray-200 py-10">
+<!-- Footer -->
+<footer>
+    <!-- Primer Div con fondo gris claro -->
+    <div class="bg-gray-300 w-full py-10">
         <div class="container mx-auto px-4">
-            <!-- Footer Content Here -->
-            <!-- Contenedor Principal -->
+            <!-- Contenido del primer Div -->
             <div class="flex flex-wrap md:flex-nowrap justify-between items-start">
-
                 <!-- Menú de Navegación -->
                 <div class="w-full md:w-1/4 mb-6 md:mb-0">
                     <h2 class="text-gray-700 font-semibold mb-2">Menú</h2>
@@ -240,16 +241,21 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <!-- Segundo Div con fondo negro -->
+    <div class="bg-white w-full py-4">
+        <div class="container mx-auto px-4">
             <!-- Logo y Derechos Reservados -->
-            <div class="flex flex-col items-center mt-10">
-                <img src="/img/iso-logo2.png" alt="Logo R" width="56" height="64" class="mb-4">
-                <p class="text-gray-600 text-sm">2024 <span class="font-semibold">Fundación Emanuel</span>. Todos los
-                    derechos reservados</p>
-                <a href="#" class="text-red-600 text-sm mt-2">Políticas de privacidad y protección de datos</a>
+            <div class="flex flex-col items-center text-black">
+                <p class="text-sm">2024 <span class="font-semibold">Fundación Emanuel</span>. Todos los derechos reservados</p>
+                <a href="#" class="text-red-600 text-sm  ">Políticas de privacidad y protección de datos</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
+
 
 
    <!-- JavaScript for Carousel and Menu -->
